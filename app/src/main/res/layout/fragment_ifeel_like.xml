@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black"
+    android:orientation="vertical"
+    tools:context="fitticket.com.fragments.IFeelLikeFragment">
+
+    <LinearLayout
+        android:id="@+id/exploreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/explore_button_yellow2"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/fav_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/favorite_on"
+                android:textColor="@color/GrayGoose"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/favorite_count"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="right"
+                android:background="@drawable/round_shape_red"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/exploretext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/explore"
+            android:textColor="@color/White"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/chevron_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/ic_chevron"
+            android:textColor="@color/White"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/category_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+        <com.ftgoqiiact.viewmodel.custom.ProgressBarCircular
+            android:id="@+id/progressBar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@color/BlueWhale"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

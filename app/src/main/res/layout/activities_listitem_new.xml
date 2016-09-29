@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/gymDetailsLayout"
+    android:background="@color/GrayGoose"
+    android:layout_gravity="bottom">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="5dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/gymClickLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.android.volley.toolbox.NetworkImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/gymLogoImgView"
+                    />
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:text="Gym Floor"
+                        android:id="@+id/activityNameTxtView"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/FbBlue"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/GrayGoose"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Zumba with Nandanam"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:id="@+id/gymNameTxtView"
+                        android:textColor="@color/BlackCat"/>
+                    <LinearLayout
+                        android:padding="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+                        <TextView
+                            android:paddingLeft="3dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:id="@+id/gymLocality"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/distance"
+                            android:layout_weight="0.2"
+                            android:gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/GrayGoose"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/timeSlotLayout"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
